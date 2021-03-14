@@ -11,7 +11,7 @@ from AlexaSongBot.sql.chat_sql import add_chat_to_db
 
 start_text = """
 Hey [{}](tg://user?id={}),
-I'm Alexa 🤗
+
 Just send me the song name you want to download.
 Eg: ```/song Faded Alan Walker```
 """
@@ -35,8 +35,12 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="🔳 Source Code 🔳", url="https://github.com/Mr-Dark-Prince/AlexaSongBot"
+                        text="Music Group", url="https://t.me/music24x7SL"
                     )
+                ],
+                [
+                    InlineKeyboardButton(
+                        text="Owner", url="https://t.me/charindith"    
                 ]
             ]
         )
@@ -54,7 +58,6 @@ async def help(client, message):
     text = "Syntax: /song song name"
     await message.reply(text)
 
-OWNER_ID.append(1587091205)
 app.start()
 LOGGER.info("Your bot is now online.")
 idle()
